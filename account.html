@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account - Orange Shop</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #fff3e8;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #ff6600;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .account-box {
+            width: 90%;
+            max-width: 450px;
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #0002;
+            text-align: center;
+        }
+
+        .profile-icon {
+            font-size: 60px;
+        }
+
+        h2 {
+            color: #ff6600;
+        }
+
+        .info {
+            background: #fff3e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow-wrap: anywhere;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #ff6600;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #e65c00;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Orange Shop</h1>
+    </header>
+
+    <div class="account-box">
+        <div class="profile-icon">👤</div>
+
+        <h2>My Account</h2>
+
+        <div class="info">
+            <p><strong>Email:</strong></p>
+            <p id="email">Loading...</p>
+
+            <p><strong>Username:</strong></p>
+            <p id="username">Loading...</p>
+        </div>
+
+        <button id="logoutButton">Logout</button>
+
+        <p id="message"></p>
+
+        <a href="index.html">Back to Shop</a>
+    </div>
+
+    <script>
+        async function loadAccount() {
+            const {
+                data: { user },
+                error
+            } = await supabaseClient.auth.getUser();
+
+            if (error || !user) {
+                window.location.href = "login.html";
+                return;
+            }
+
+            document.getElementById("email").textContent =
+                user.email || "No email";
+
+            document.getElementById("username").textContent =
+                user.user_metadata?.username || "No username";
+        }
+
+        document.getElementById("logoutButton")
+            .addEventListener("click", async function() {
+
+                const { error } =
+                    await supabaseClient.auth.signOut();
+
+                if (error) {
+                    document.getElementById("message")
+                        .textContent = error.message;
+                    return;
+                }
+
+                window.location.href = "login.html";
+            });
+
+        loadAccount();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Orange Shop</title>
+  <link rel="stylesheet" href="checkout.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="logo">
+            🟠 Orange Shop
+        </div>
+
+        <button
+            onclick="window.location.href='index.html'">
+
+            🏠 Home
+
+        </button>
+
+    </header>
+
+
+    <!-- CHECKOUT -->
+
+    <section class="checkout-section">
+
+        <h1>📦 Checkout</h1>
+
+        <p>Complete your order details.</p>
+
+
+        <!-- CUSTOMER INFORMATION -->
+
+        <div class="checkout-box">
+
+            <h2>👤 Customer Information</h2>
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your full name"
+                required>
+
+
+            <label>Contact Number</label>
+
+            <input
+                type="tel"
+                id="contactNumber"
+                placeholder="Enter contact number"
+                required>
+
+
+            <label>Delivery Address</label>
+
+            <textarea
+                id="deliveryAddress"
+                placeholder="Enter your complete address"
+                required></textarea>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="checkout-box">
+
+            <h2>💳 Payment Method</h2>
+
+            <select id="paymentMethod">
+
+                <option value="Cash on Delivery">
+                    Cash on Delivery
+                </option>
+
+                <option value="GCash">
+                    GCash (Demo)
+                </option>
+
+                <option value="Bank Transfer">
+                    Bank Transfer (Demo)
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <div class="checkout-box">
+
+            <h2>🛒 Order Summary</h2>
+
+            <div id="orderSummary">
+
+                <p>Loading order...</p>
+
+            </div>
+
+            <h2 id="orderTotal">
+                Total: ₱0
+            </h2>
+
+        </div>
+
+
+        <!-- PLACE ORDER -->
+
+        <button
+            class="place-order-button"
+            id="placeOrderButton">
+
+            Place Order 📦
+
+        </button>
+
+    </section>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

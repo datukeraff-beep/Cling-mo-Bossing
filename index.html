@@ -1,14 +1,600 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orange Shop | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+    <!-- TOP HEADER -->
+    <header class="main-header">
+
+        <div class="logo">
+            🟠 Orange Shop
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <button id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button class="cart-button">
+                🛒 Cart (0)
+            </button>
+
+            <a href="account.html" class="login-button">
+    My Account
+</a>
+    👤 Login
+</a>
+
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+
+        <a href="#home">Home</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#flash-sale">Flash Sale 🔥</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#footer">About Us</a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME TO ORANGE SHOP
+            </p>
+
+            <h1>
+                Your Online Shopping
+                <span>Destination 🛒</span>
+            </h1>
+
+            <p>
+                Discover amazing products,
+                affordable prices, and
+                exciting shopping deals.
+            </p>
+
+            <button
+                class="shop-now-button"
+                id="shopNowButton"
+            >
+                Shop Now 🛍️
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            🛍️
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+
+        <div class="section-heading">
+
+            <h2>Shop by Category</h2>
+
+            <p>
+                Find what you need
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    📱
+                </div>
+
+                <h3>Electronics</h3>
+
+                <p>Gadgets & Devices</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    👕
+                </div>
+
+                <h3>Fashion</h3>
+
+                <p>Clothes & Accessories</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    💻
+                </div>
+
+                <h3>Computers</h3>
+
+                <p>Laptops & Accessories</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🎮
+                </div>
+
+                <h3>Gaming</h3>
+
+                <p>Games & Equipment</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🏠
+                </div>
+
+                <h3>Home</h3>
+
+                <p>Home Essentials</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+                    🎒
+                </div>
+
+                <h3>Others</h3>
+
+                <p>More Products</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FLASH SALE -->
+    <section class="section flash-sale" id="flash-sale">
+
+        <div class="section-heading sale-heading">
+
+            <h2>🔥 Flash Sale</h2>
+
+            <p>
+                Limited deals from Orange Shop
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    📱
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Smartphone</h3>
+
+                    <p class="product-description">
+                        Affordable smartphone
+                    </p>
+
+                    <p class="price">
+                        ₱5,999
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.8 | 120 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Wireless Earphones</h3>
+
+                    <p class="product-description">
+                        Quality wireless audio
+                    </p>
+
+                    <p class="price">
+                        ₱299
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.7 | 250 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    ⌨️
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Gaming Keyboard</h3>
+
+                    <p class="product-description">
+                        Keyboard for gamers
+                    </p>
+
+                    <p class="price">
+                        ₱899
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.9 | 80 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    👕
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Oversized Shirt</h3>
+
+                    <p class="product-description">
+                        Comfortable everyday wear
+                    </p>
+
+                    <p class="price">
+                        ₱199
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.6 | 300 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALL PRODUCTS -->
+    <section class="section" id="products">
+
+        <div class="section-heading">
+
+            <h2>Popular Products 🛍️</h2>
+
+            <p>
+                Explore our collection
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎒
+                </div>
+
+                <div class="product-info">
+
+                    <h3>School Backpack</h3>
+
+                    <p class="product-description">
+                        Perfect for students
+                    </p>
+
+                    <p class="price">
+                        ₱499
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.8 | 90 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🖱️
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Wireless Mouse</h3>
+
+                    <p class="product-description">
+                        Smooth and responsive
+                    </p>
+
+                    <p class="price">
+                        ₱349
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.7 | 150 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    👟
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Casual Shoes</h3>
+
+                    <p class="product-description">
+                        Everyday comfortable shoes
+                    </p>
+
+                    <p class="price">
+                        ₱799
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.6 | 110 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🔌
+                </div>
+
+                <div class="product-info">
+
+                    <h3>USB Charger</h3>
+
+                    <p class="product-description">
+                        Convenient charging accessory
+                    </p>
+
+                    <p class="price">
+                        ₱249
+                    </p>
+
+                    <p class="rating">
+                        ⭐ 4.8 | 200 sold
+                    </p>
+
+                    <button class="add-to-cart">
+                        Add to Cart 🛒
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Convenient delivery options
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>Secure Shopping</h3>
+
+            <p>
+                Designed with user safety in mind
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💬
+            </div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                We're here to help
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>🟠 Orange Shop</h3>
+
+                <p>
+                    Your online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+
+                <a href="#categories">Categories</a>
+
+                <a href="#products">Products</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    📧 orangeshop@example.com
+                </p>
+
+                <p>
+                    📍 Philippines
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Orange Shop. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
